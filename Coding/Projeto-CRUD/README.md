@@ -1,6 +1,6 @@
 # Projeto CRUD
 
-Projeto para disciplina de Coding ministrada pelo professor Arnott Caiado
+Projeto de criação de algoritmo CRUD para disciplina de Coding ministrada pelo professor Arnott Caiado
 
 **Equipe:**
 * Aira Soares
