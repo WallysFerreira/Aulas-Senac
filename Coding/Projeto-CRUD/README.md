@@ -7,4 +7,7 @@ Projeto de criação de algoritmo CRUD para disciplina de Coding ministrada pelo
 * Gleyce Santos
 * Wallys Ferreira
 
-![img]
+<p> <br> </p>
+
+## Fluxograma a ser seguido:
+![alt_text](crud-aira-gleyce-wallys.png)
