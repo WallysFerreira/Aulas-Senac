@@ -104,15 +104,28 @@ void deletar(Alunos* aluno, int matricula, int* contagem) {
 		if (aluno->matricula == matricula) {
 			achou = 1;
 
+			// Reinicializar todos os campos daquele aluno
+			aluno->nome = "";
+			aluno->cpf = "";
+			aluno->diaNascimento = 0;
+			aluno->mesNascimento = 0;
+			aluno->anoNascimento = 0;
+			aluno->telefone = "";
+			aluno->email = "";
+			aluno->curso = "";
 
+			// Diminuir contagem por 1
+			*contagem--;
 		}
 	}
-	// Reinicializar todos os campos daquele aluno
-	// Diminuir contagem por 1
+
+	if (!achou) {
+		printf("Aluno não encontrado")
+	}
 }
 
 // Mostrar tabela de alunos (Função nova que Arnott pediu pra colocar)
-void mostrarLista(Alunos* aluno, int* contGeral) {
+void mostrarLista(Alunos* aluno, int contGeral) {
 	// Ir de aluno em aluno mostrando todas as informações de todos enquanto for menor que a contagem geral
 }
 
