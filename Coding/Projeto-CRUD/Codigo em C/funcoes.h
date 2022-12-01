@@ -97,8 +97,16 @@ void alterar(Alunos* aluno, int matricula, int contagem) {
 }
 
 // Deletar um aluno da lista (Delete)
-void deletar(Alunos* aluno, int* contGeral) {
+void deletar(Alunos* aluno, int matricula, int* contagem) {
+	int achou = 0;
 	// Ir de aluno em aluno até achar o que tem a matricula igual a enviada
+	for (int i = 0; i < contagem; i++) {
+		if (aluno->matricula == matricula) {
+			achou = 1;
+
+
+		}
+	}
 	// Reinicializar todos os campos daquele aluno
 	// Diminuir contagem por 1
 }
