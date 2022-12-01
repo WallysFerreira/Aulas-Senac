@@ -2,7 +2,7 @@
 #include "cabecalho.h"
 
 // Mostrar menu de opções
-void menu() {
+int menu() {
 	// Criar variável int resposta
 	int resposta = 0;
 	// Mostrar as opções pro usuário e pedir pra ele digitar o numero correspondente a oque ele quer
@@ -41,7 +41,7 @@ void pesquisar(Alunos* aluno, int matricula, int contagem) {
 	for (int i = 0; i < contagem; i++) {
 		// Mostrar todas as informações desse aluno
 		if (aluno->matricula == matricula) {
-			printf("Matricula do aluno: %d\nNome do aluno: %s\nCPF do aluno: %d\nData de nascimento do aluno: %d/%d/%d\nTelefone do aluno: %s\nEmail do aluno: %s\nCurso do aluno: %s\n", aluno->matricula, aluno->nome, aluno->cpf, aluno->diaNascimento, aluno->mesNascimento, aluno->anoNascimento, aluno->telefone, aluno->email, aluno->curso);
+			printf("Matricula do aluno: %d\nNome do aluno: %s\nCPF do aluno: %d\nData de nascimento do aluno: %d/%d/%d\nTelefone do aluno: %s\nEmail do aluno: %s\nCurso do aluno: %s\n", aluno[matricula].matricula, aluno[matricula].nome, aluno[matricula].cpf, aluno[matricula].diaNascimento, aluno[matricula].mesNascimento, aluno[matricula].anoNascimento, aluno[matricula].telefone, aluno[matricula].email, aluno[matricula].curso);
 			achou = 1;
 			return;
 		}
@@ -105,14 +105,14 @@ void deletar(Alunos* aluno, int matricula, int* contagem) {
 			achou = 1;
 
 			// Reinicializar todos os campos daquele aluno
-			aluno->nome = "";
-			aluno->cpf = "";
-			aluno->diaNascimento = 0;
-			aluno->mesNascimento = 0;
-			aluno->anoNascimento = 0;
-			aluno->telefone = "";
-			aluno->email = "";
-			aluno->curso = "";
+			// aluno->nome;
+			// aluno->cpf = "";
+			// aluno->diaNascimento = 0;
+			// aluno->mesNascimento = 0;
+			// aluno->anoNascimento = 0;
+			// aluno->telefone = "";
+			// aluno->email = "";
+			// aluno->curso = "";
 
 			// Diminuir contagem por 1
 			*contagem--;
@@ -120,7 +120,7 @@ void deletar(Alunos* aluno, int matricula, int* contagem) {
 	}
 
 	if (!achou) {
-		printf("Aluno não encontrado")
+		printf("Aluno não encontrado");
 	}
 }
 
